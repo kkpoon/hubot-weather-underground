@@ -1,7 +1,7 @@
 {
   "name": "hubot-weather-underground",
   "description": "a hubot weather reporter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "K.K. POON <noopkk@gmail.com>",
   "license": "MIT",
 

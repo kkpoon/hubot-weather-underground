@@ -30,14 +30,15 @@ module.exports = (robot) ->
           data = JSON.parse(body)
           obs = data.current_observation
           msg.send "The current weather condition of " +
-            "#{obs.display_location.city} is #{obs.weather}:\n" +
-            "At #{obs.observation_time_rfc822}, " +
+            "#{obs.display_location.full} is #{obs.weather}:\n" +
+            "#{obs.observation_time}, " +
             "Temperature is #{obs.temp_c}°C " +
             "(feels like #{obs.feelslike_c}°C), " +
             "Humidity #{obs.relative_humidity}, " +
             "Pressure #{obs.pressure_mb}hPa, " +
             "Wind #{obs.wind_string}, " +
-            "UV #{obs.UV}"
+            "UV #{obs.UV}\n" +
+            "More information: #{obs.ob_url}"
 
         catch err
           msg.send err

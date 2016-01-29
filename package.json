@@ -1,0 +1,39 @@
+{
+  "name": "hubot-weather-underground",
+  "description": "a hubot weather reporter",
+  "version": "0.1.0",
+  "author": "K.K. POON <noopkk@gmail.com>",
+  "license": "MIT",
+
+  "keywords": ["hubot","hubot-scripts","weather","wunderground"],
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kkpoon/hubot-weather-underground.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/kkpoon/hubot-weather-underground/issues"
+  },
+
+  "dependencies": {
+    "coffee-script": "~1.6"
+  },
+
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon-chai": "*",
+    "sinon": "*",
+    "grunt-mocha-test": "~0.7.0",
+    "grunt-release": "~0.6.0",
+    "matchdep": "~0.1.2",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+
+  "main": "index.coffee",
+
+  "scripts": {
+    "test": "grunt test"
+  }
+}

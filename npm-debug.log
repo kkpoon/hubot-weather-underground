@@ -1,0 +1,105 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/kkpoon/.nvm/versions/node/v4.2.6/bin/node',
+1 verbose cli   '/Users/kkpoon/.nvm/versions/node/v4.2.6/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@2.14.12
+3 info using node@v4.2.6
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/kkpoon/Development/clustertech/hubot/hubot-weather',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/kkpoon/.npm/hubot-weather/0.1.0/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/kkpoon/.npm/hubot-weather/0.1.0/package.tgz',
+9 verbose tar pack   '/Users/kkpoon/Development/clustertech/hubot/hubot-weather' ]
+10 verbose tarball /Users/kkpoon/.npm/hubot-weather/0.1.0/package.tgz
+11 verbose folder /Users/kkpoon/Development/clustertech/hubot/hubot-weather
+12 info prepublish hubot-weather@0.1.0
+13 verbose addLocalTarball adding from inside cache /Users/kkpoon/.npm/hubot-weather/0.1.0/package.tgz
+14 silly cache afterAdd hubot-weather@0.1.0
+15 verbose afterAdd /Users/kkpoon/.npm/hubot-weather/0.1.0/package/package.json not in flight; writing
+16 verbose afterAdd /Users/kkpoon/.npm/hubot-weather/0.1.0/package/package.json written
+17 silly publish { name: 'hubot-weather',
+17 silly publish   description: 'a hubot weather reporter',
+17 silly publish   version: '0.1.0',
+17 silly publish   author: { name: 'K.K. POON', email: 'noopkk@gmail.com' },
+17 silly publish   license: 'MIT',
+17 silly publish   keywords: [ 'hubot', 'hubot-scripts', 'weather' ],
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'git://github.com/kkpoon/hubot-weather.git' },
+17 silly publish   bugs: { url: 'https://github.com/kkpoon/hubot-weather/issues' },
+17 silly publish   dependencies: { 'coffee-script': '~1.6' },
+17 silly publish   devDependencies:
+17 silly publish    { mocha: '*',
+17 silly publish      chai: '*',
+17 silly publish      'sinon-chai': '*',
+17 silly publish      sinon: '*',
+17 silly publish      'grunt-mocha-test': '~0.7.0',
+17 silly publish      'grunt-release': '~0.6.0',
+17 silly publish      matchdep: '~0.1.2',
+17 silly publish      'grunt-contrib-watch': '~0.5.3' },
+17 silly publish   main: 'index.coffee',
+17 silly publish   scripts: { test: 'grunt test' },
+17 silly publish   readme: '# hubot-weather\n\na hubot weather reporter\n\nSee [`src/weather.coffee`](src/weather.coffee) for full documentation.\n\n## Installation\n\nIn hubot project repo, run:\n\n`npm install hubot-weather --save`\n\nThen add **hubot-weather** to your `external-scripts.json`:\n\n```json\n["hubot-weather"]\n```\n\n## Set the environment variable\n\n`HUBOT_WEATHER_WUNDERGROUND_KEY=YOUR_WUNDERGROUND_KEY`\n\n## Sample Interaction\n\n```\nuser1>> hubot hello\nhubot>> hello!\n```\n',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   gitHead: '866fcbced941fdbc13b64b9a351e90e8953944b4',
+17 silly publish   homepage: 'https://github.com/kkpoon/hubot-weather#readme',
+17 silly publish   _id: 'hubot-weather@0.1.0',
+17 silly publish   _shasum: '487d1840f8872ebdb53072fe4436fe4380e9e21e',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name hubot-weather
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/hubot-weather
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /Users/kkpoon/.npm/hubot-weather/0.1.0/package.tgz
+25 verbose request uri https://registry.npmjs.org/hubot-weather
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 9:18:30 AM
+28 verbose request using bearer token for auth
+29 verbose request id d00e2423b37885d5
+30 http request PUT https://registry.npmjs.org/hubot-weather
+31 http 403 https://registry.npmjs.org/hubot-weather
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '105',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Fri, 29 Jan 2016 01:18:31 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-hkg6822-HKG',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1454030310.945159,VS0,VE698' }
+33 verbose request invalidating /Users/kkpoon/.npm/registry.npmjs.org/hubot-weather on PUT
+34 error publish Failed PUT 403
+35 verbose stack Error: You do not have permission to publish 'hubot-weather'. Are you logged in as the correct user? : hubot-weather
+35 verbose stack     at makeError (/Users/kkpoon/.nvm/versions/node/v4.2.6/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+35 verbose stack     at CachingRegistryClient.<anonymous> (/Users/kkpoon/.nvm/versions/node/v4.2.6/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+35 verbose stack     at Request._callback (/Users/kkpoon/.nvm/versions/node/v4.2.6/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+35 verbose stack     at Request.self.callback (/Users/kkpoon/.nvm/versions/node/v4.2.6/lib/node_modules/npm/node_modules/request/request.js:198:22)
+35 verbose stack     at emitTwo (events.js:87:13)
+35 verbose stack     at Request.emit (events.js:172:7)
+35 verbose stack     at Request.<anonymous> (/Users/kkpoon/.nvm/versions/node/v4.2.6/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+35 verbose stack     at emitOne (events.js:82:20)
+35 verbose stack     at Request.emit (events.js:169:7)
+35 verbose stack     at IncomingMessage.<anonymous> (/Users/kkpoon/.nvm/versions/node/v4.2.6/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+36 verbose statusCode 403
+37 verbose pkgid hubot-weather
+38 verbose cwd /Users/kkpoon/Development/clustertech/hubot/hubot-weather
+39 error Darwin 15.3.0
+40 error argv "/Users/kkpoon/.nvm/versions/node/v4.2.6/bin/node" "/Users/kkpoon/.nvm/versions/node/v4.2.6/bin/npm" "publish"
+41 error node v4.2.6
+42 error npm  v2.14.12
+43 error code E403
+44 error You do not have permission to publish 'hubot-weather'. Are you logged in as the correct user? : hubot-weather
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]

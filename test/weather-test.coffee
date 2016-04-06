@@ -12,8 +12,8 @@ describe 'weather', ->
 
     require('../src/weather')(@robot)
 
-  it 'registers a respond listener', ->
-    expect(@robot.respond).to.have.been.calledWith(/hello/)
+  it 'registers a respond weather of listener', ->
+    expect(@robot.respond).to.have.been.calledWith(/weather of (.*)/i)
 
-  it 'registers a hear listener', ->
-    expect(@robot.hear).to.have.been.calledWith(/orly/)
+  it 'registers a respond what is exactly called listener', ->
+    expect(@robot.respond).to.have.been.calledWith(/what is (.*) (exactly|exact) (called|named|call|name)[\?]?/i)

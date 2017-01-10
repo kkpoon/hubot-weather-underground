@@ -20,6 +20,12 @@ Then add **hubot-weather-underground** to your `external-scripts.json`:
 
 `HUBOT_WEATHER_WUNDERGROUND_KEY=YOUR_WUNDERGROUND_KEY`
 
+## Temperature format
+
+If you want to use fahrenheit instead of celsius use the following environment variable
+
+`HUBOT_WEATHER_UNDERGROUND_FORMAT=F`
+
 ## Sample Interaction
 
 ```

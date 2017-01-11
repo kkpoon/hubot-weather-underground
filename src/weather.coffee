@@ -31,11 +31,11 @@ module.exports = (robot) ->
         try
           data = JSON.parse(body)
           obs = data.current_observation
-          temp = obs.temp_f+'°C'
-          feels_like = obs.feelslike_f+'°C'
+          temp = obs.temp_c+'°C'
+          feels_like = obs.feelslike_c+'°C'
           if WUNDERGROUND_WEATHER_FORMAT == 'f'
-            temp = obs.temp_c+'°F'
-            feels_like = obs.feelslike_c+'°F'
+            temp = obs.temp_f+'°F'
+            feels_like = obs.feelslike_f+'°F'
             
           msg.send "The current weather condition of " +
             "#{obs.display_location.full} is #{obs.weather}:\n" +

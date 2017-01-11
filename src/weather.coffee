@@ -36,7 +36,7 @@ module.exports = (robot) ->
           if WUNDERGROUND_WEATHER_FORMAT == 'f'
             temp = obs.temp_f+'°F'
             feels_like = obs.feelslike_f+'°F'
-            
+           
           msg.send "The current weather condition of " +
             "#{obs.display_location.full} is #{obs.weather}:\n" +
             "#{obs.observation_time}, " +

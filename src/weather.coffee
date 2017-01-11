@@ -13,6 +13,8 @@
 
 WUNDERGROUND_KEY = process.env.HUBOT_WEATHER_WUNDERGROUND_KEY
 
+WUNDERGROUND_WEATHER_FORMAT = if process.env.HUBOT_WEATHER_WUNDERGROUND_FORMAT then process.env.HUBOT_WEATHER_WUNDERGROUND_FORMAT else 'c'
+
 WUNDERGROUND_URL = "http://api.wunderground.com/api/#{WUNDERGROUND_KEY}"
 
 module.exports = (robot) ->
@@ -29,11 +31,17 @@ module.exports = (robot) ->
         try
           data = JSON.parse(body)
           obs = data.current_observation
+          temp = obs.temp_f+'°C'
+          feels_like = obs.feelslike_f+'°C'
+          if WUNDERGROUND_WEATHER_FORMAT == 'f'
+            temp = obs.temp_c+'°F'
+            feels_like = obs.feelslike_c+'°F'
+            
           msg.send "The current weather condition of " +
             "#{obs.display_location.full} is #{obs.weather}:\n" +
             "#{obs.observation_time}, " +
-            "Temperature is #{obs.temp_c}°C " +
-            "(feels like #{obs.feelslike_c}°C), " +
+            "Temperature is #{temp} " +
+            "(feels like #{feels_like}), " +
             "Humidity #{obs.relative_humidity}, " +
             "Pressure #{obs.pressure_mb}hPa, " +
             "Wind #{obs.wind_string}, " +
